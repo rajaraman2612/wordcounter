@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  <title>WORD COUNTER</title>
+	  <link rel="icon"  href=" board.png">
+	</head>
+	<body style="background-image: url('pexels2.jpg') ">
+		<center>
+			<br><br><br>
+			<h4 style="font-family: sans-serif; "> <span style="color: #DE4747 " 
+				><b>WORD</b> <span style="color: #7F74D5 "><b>COUNTER</b></span></h4>
+			<textarea id="text" rows="10" cols="10" style="width: 800px ;height: 300px" class="form-control"></textarea>
+			<br><br>
+			<button class="btn btn-info" onclick=" document.getElementById('wdct').innerHTML=wordcount()">  WORD COUNT  </button><br><br><br>
+			<h5 style="font-family: sans-serif;" > <b>TOTAL WORDS IN THE PARAGRAPH</b>   </h5> &nbsp<h5 style="color: #ECB235 ;font-family: sans-serif; font-size: 50px"id=wdct> </h5>
+			<br>
+			 <h4
+
+		</center>
+	</body>
+	<style >
+		#text{
+			box-shadow: 10px 10px 10px 10px;
+			border-radius: 10px 10px 10px 10px;
+		}
+	</style>
+	<script >
+		function wordcount(){
+			var words=document.getElementById('text').value;
+			var count =0;
+
+			for(i=0;i<words.length;i++){
+				var current = words[i];
+				if(current==" "){
+					count=count+1;
+				}
+			}
+			return count+1;
+		}
+	</script>
+</html>
